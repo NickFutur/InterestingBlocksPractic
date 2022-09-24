@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Первый блок */
+
+header {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    --shadow: 0 2px 4px rgb(0, 0, 0, 0, 0.4);
+    /* переменная shadow не понятно работает или нет */
+}
+
+.img-block {
+    position: absolute;
+    background: rgb(177, 177, 177) url(../img/mountains-gf8b888387_1920.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    filter: saturate(30%) brightness(60%);
+}
+
+.title-name {
+    display: inline-block;
+    position: relative;
+    top: 35vh;
+    left: 15vw;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    font-size: 4vw;
+    color: #fff;
+    letter-spacing: 1vw;
+    text-shadow: var(--shadow);
+}
+
+.title-name:after {
+    content: '';
+    display: block;
+    position: absolute;
+    height: 0.5vh;
+    background-color: #fff;
+    width: 55vw;
+    margin-top: 1.5vw;
+    box-shadow: var(--shadow);
+}
+
+
+/* Второй блок */
+
+.block-two {
+    /* height: 970px; */
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    overflow: hidden;
+    min-height: 100vh;
+}
+
+.block-two>div {
+    position: relative;
+    min-width: 900px;
+}
+
+.block-two>div:nth-child(1) {
+    left: -50%;
+    width: 900px;
+    background-color: #303030;
+    z-index: 1;
+}
+
+.block-two>div:nth-child(2) {
+    clip-path: polygon(65% 0%, 100% 50%, 65% 100%, 0% 100%, 35% 50%, 0% 0%);
+    background-color: #fff;
+    left: -100%;
+    z-index: 2;
+    width: 900px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 100px;
+}
+
+.block-two>div:nth-child(3) {
+    left: -80%;
+    background: url(../img/sunrise-geaa6006c2_1920.jpg) 100% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* min-width: 1000px; */
+    width: 130vw;
+    z-index: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.line {
+    position: absolute;
+    height: 55%;
+    width: 2px;
+    background-color: #fff;
+    top: 0%;
+    left: 67%;
+    /* transform: rotate(-33deg); */
+    transform: rotate(-33deg);
+}
+
+.list-margin {
+    margin-left: 100px;
+}
+
+.list-margin *:not(.list-margin) {
+    margin-bottom: 80px;
+}
+
+.list-text {
+    max-width: 300px;
+    position: relative;
+    font-size: 14px;
+}
+
+.list-text::before {
+    content: '';
+    display: block;
+    top: -20px;
+    width: 3px;
+    height: 40px;
+    background-color: #949393;
+    position: absolute;
+    left: -15px;
+}
+
+.list-title {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 42px;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    margin-top: 90px;
+    color: #333;
+}
+
+.list-title span:last-child {
+    display: block;
+    margin-left: 40px;
+}
