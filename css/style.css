@@ -153,7 +153,8 @@ header {
 /* Третий блок */
 
 .block-three {
-    height: 100vh;
+    position: relative;
+    min-height: 100vh;
     display: grid;
     grid-template-columns: 400px 1fr;
 }
@@ -200,7 +201,7 @@ header {
 .block-three__right {
     display: grid;
     grid-template-columns: repeat( auto-fit, minmax(250px, auto));
-    padding: 250px 200px;
+    padding: 200px 200px;
     grid-gap: 80px;
 }
 
@@ -247,3 +248,134 @@ header {
     letter-spacing: 2px;
     line-height: 1em;
 }
+
+
+/* Четвёртый блок */
+
+.block-four {
+    position: relative;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 400px;
+}
+
+.block-four__left {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+}
+
+.block-four__left>div:first-child {
+    justify-self: end;
+    text-align: right;
+}
+
+.block-four__left-square {
+    --size: 22vw;
+    --rot: 45deg;
+    position: relative;
+    background-color: #303030;
+    height: var(--size);
+    width: var(--size);
+    rotate: var(--rot);
+    margin-bottom: 9vw;
+    margin-top: 12vw;
+    top: -4vw;
+    box-shadow: 0px 3vw 5vw 10px rgb(0 0 0 / 50%);
+}
+
+.block-four__left-square::before {
+    content: " ";
+    position: absolute;
+    top: 10%;
+    bottom: 10%;
+    left: -10%;
+    width: 3px;
+    background-color: #303030;
+}
+
+.block-four__left-square:last-child:before {
+    left: initial;
+    right: -10%;
+}
+
+.block-four__left-square__bg-wrap {
+    height: 100%;
+    overflow: hidden;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+}
+
+.block-four__left-square__bg {
+    height: 150%;
+    width: 150%;
+    background-position: center;
+    background-size: cover;
+    rotate: calc(var(--rot)*-1);
+}
+
+.block-four__left-txt {
+    font-size: 14px;
+    max-width: 300px;
+}
+
+.block-four__left-txt:last-child {
+    margin-left: auto;
+    margin-bottom: 6vw;
+}
+
+.block-four__left-txt+.block-four__left-square {
+    top: 0;
+    margin-bottom: 0;
+}
+
+.block-four__left>div:first-child .block-four__left-txt {
+    border-right: 3px solid #777;
+    padding-right: 20px;
+}
+
+.block-four__left>div:last-child .block-four__left-txt {
+    border-left: 3px solid #777;
+    padding-left: 20px;
+}
+
+.block-four__right {
+    display: grid;
+    /* grid-template-rows: 1fr;
+    align-content: space-around; */
+    justify-items: end;
+    padding: 100px 60px;
+    text-transform: uppercase;
+    text-align: right;
+}
+
+.block-four__right-title {
+    font-family: arial;
+    font-size: 42px;
+    letter-spacing: 10px;
+    color: #303030;
+}
+
+.block-four__right-label {
+    font-family: arial;
+    font-size: 25px;
+    letter-spacing: 7px;
+    color: #666;
+}
+
+.block-four__right-desc {
+    text-transform: none;
+    font-size: 14px;
+    max-width: 200px;
+    letter-spacing: 1px;
+}
+
+.block-four__right-line {
+    width: 3px;
+    background-color: #303030;
+    height: 170%;
+}
+
+
+/* Пятый блок */
