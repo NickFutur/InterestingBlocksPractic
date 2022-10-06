@@ -1,7 +1,7 @@
 // $("html,body").css("overflow", "hidden");
 $(document).ready(function() {
     $(function scrollBlock() {
-        $('#link-one', '#link-two', '#link-three', '#link-four').click(function(e) {
+        $('#link-one', '#link-two', '#link-three', '#link-four', '#link-five').click(function(e) {
             e.preventDefault();
         });
         $('#link-one').click(function() {
@@ -23,6 +23,19 @@ $(document).ready(function() {
             $('html, body').animate({
                 scrollTop: $('#block-four').offset().top
             }, 500);
+        });
+        $('#link-five').click(function() {
+            $('html, body').animate({
+                scrollTop: $('#block-five').offset().top
+            }, 500);
+        });
+    });
+
+    $(function closeEl() {
+        $('.close-button').click(function() {
+            $('dialog').css({
+                'display': 'none'
+            });
         });
     });
 });
