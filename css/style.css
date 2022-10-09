@@ -4,34 +4,50 @@
     box-sizing: border-box;
 }
 
+.body-fixed {
+    position: fixed;
+}
+
 dialog {
     background: none;
 }
 
-.dialog-open {
-    width: 50%;
-    height: 50%;
+.dialog-font {
+    width: 100%;
+    height: 100%;
     position: absolute;
-    left: 25%;
-    top: 25%;
+    left: 0%;
+    top: 0%;
+    background-color: rgba(0, 0, 0, 0.7);
     z-index: 100;
+}
+
+.dialog-open {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 101;
     border: none;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: rgba(48, 48, 48, 0.5);
 }
 
 .dial {
     position: absolute;
-    width: 70%;
-    height: 70%;
+    width: 50%;
+    height: 50%;
     background-color: rgba(48, 48, 48, 1);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    z-index: 101;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 .dialog-open__label {
@@ -75,6 +91,33 @@ dialog {
     background-color: #fff;
     z-index: 101;
     transform: rotate(45deg);
+}
+
+
+/* Блок Info */
+
+.info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 1000;
+    width: 50px;
+    height: 50px;
+    top: 5%;
+    right: 0.5%;
+    background-color: rgba(48, 48, 48, 1);
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.info__content {
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 

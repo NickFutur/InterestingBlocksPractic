@@ -1,5 +1,6 @@
 // $("html,body").css("overflow", "hidden");
 $(document).ready(function() {
+
     $(function scrollBlock() {
         $('#link-one', '#link-two', '#link-three', '#link-four', '#link-five').click(function(e) {
             e.preventDefault();
@@ -30,12 +31,36 @@ $(document).ready(function() {
             }, 500);
         });
     });
+    $(function showModalWindow() {
+        $('dialog').css({
+            'opacity': '0',
+            'visibility': 'hidden'
+        });
+    });
 
     $(function closeEl() {
         $('.close-button').click(function() {
             $('dialog').css({
-                'display': 'none'
+                'opacity': '0',
+                'visibility': 'hidden'
+            });
+        });
+        $('.dialog-font').click(function() {
+            $('dialog').css({
+                'opacity': '0',
+                'visibility': 'hidden'
+            });
+        });
+
+    });
+
+    $(function openModelWindow() {
+        $('.info').click(function() {
+            $('dialog').css({
+                'opacity': '1',
+                'visibility': 'visible'
             });
         });
     });
+
 });
