@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 .disable-scroll {
     position: relative;
     overflow: hidden;
@@ -674,6 +678,7 @@ header {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     position: relative;
+    overflow-x: hidden;
 }
 
 .block-six__body {
@@ -724,12 +729,15 @@ header {
 
 .bloxk-six__image {
     clip-path: polygon(0.00% 0.00%, 100.00% 0.00%, 100.00% 100.00%, 45.17% 100%);
-    position: relative;
+    position: absolute;
     background-color: #303030;
-    z-index: 0;
     background-image: url(../img/tiger-g247c9d5a0_1920.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    width: 100%;
+    width: 70vw;
     transition: all 0.5s ease-in-out;
+    z-index: 10;
+    top: 0;
+    right: 0;
+    height: 100vh;
 }
