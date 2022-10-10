@@ -545,7 +545,7 @@ header {
 /* Пятый блок */
 
 .block-five {
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     display: grid;
     justify-content: center;
@@ -668,8 +668,68 @@ header {
 
 /* Блок шесть */
 
-.block-six {}
+.block-six {
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    position: relative;
+}
 
-.block-six__content {}
+.block-six__body {
+    position: relative;
+    /* clip-path: polygon(0.00% 0.00%, 30.00% 0.00%, 71.00% 100.00%, 0.00% 100.00%); */
+    display: grid;
+    align-items: center;
+}
 
-.bloxk-six__image {}
+.block-six__content {
+    height: 100%;
+    display: grid;
+    justify-content: space-around;
+    align-items: center;
+    grid-template-rows: 1fr 1fr 100px 100px;
+    margin-left: 5%;
+    margin-bottom: 10%;
+}
+
+.block-six__label {
+    color: #777;
+    font-size: 2vw;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font-family: Arial;
+}
+
+.block-six__title {
+    font-size: 4vw;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    font-family: Arial;
+}
+
+.block-six__txt {
+    font-size: 1vw;
+    width: 45%;
+    letter-spacing: 1px;
+}
+
+.block-six__txt-block {
+    display: flex;
+    font-size: 1vw;
+    width: 90%;
+    padding-left: 1.2vw;
+    letter-spacing: 1px;
+}
+
+.bloxk-six__image {
+    clip-path: polygon(0.00% 0.00%, 100.00% 0.00%, 100.00% 100.00%, 45.17% 100%);
+    position: relative;
+    background-color: #303030;
+    z-index: 0;
+    background-image: url(../img/tiger-g247c9d5a0_1920.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    transition: all 0.5s ease-in-out;
+}

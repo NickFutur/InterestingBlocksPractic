@@ -2,7 +2,7 @@
 $(document).ready(function() {
 
     $(function scrollBlock() {
-        $('#link-one', '#link-two', '#link-three', '#link-four', '#link-five').click(function(e) {
+        $('#link-one', '#link-two', '#link-three', '#link-four', '#link-five', '#link-six').click(function(e) {
             e.preventDefault();
         });
         $('#link-one').click(function() {
@@ -28,6 +28,11 @@ $(document).ready(function() {
         $('#link-five').click(function() {
             $('html, body').animate({
                 scrollTop: $('#block-five').offset().top
+            }, 500);
+        });
+        $('#link-six').click(function() {
+            $('html, body').animate({
+                scrollTop: $('.block-six').offset().top
             }, 500);
         });
     });
