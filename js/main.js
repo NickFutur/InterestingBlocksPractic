@@ -44,13 +44,16 @@ $(document).ready(function() {
                 'opacity': '0',
                 'visibility': 'hidden'
             });
+            $(enableScroll);
         });
         $('.dialog-font').click(function() {
             $('dialog').css({
                 'opacity': '0',
                 'visibility': 'hidden'
             });
+            $(enableScroll);
         });
+
 
     });
 
@@ -60,7 +63,47 @@ $(document).ready(function() {
                 'opacity': '1',
                 'visibility': 'visible'
             });
+            $(disableScroll);
         });
     });
+    // код на jQuery с ошбками блокировка скролла, не работает
+    // $(function disableScroll() {
+    //     var pagePosition = window.scrollY;
+    //     $('body').addClass('.disable-scroll');
+    //     $('body').dataset.position = pagePosition;
+    //     $('body').css({
+    //         'top': -pagePosition + "px",
+    //     });
+    // });
 
+    // $(function enableScroll() {
+    //     pagePosition = parseInt($('body').dataset.position, 10);
+    //     $('body').css({
+    //         'top': 'auto',
+    //     }).
+    //     $('body').removeClass('.disable-scroll');
+    // });
+    // window.scroll({ top: pagePosition, left: 0 });
+    // $('body').removeAttr('data-position');
 });
+
+
+
+
+// код на js блокировка скролла
+const body = document.body;
+
+let disableScroll = function() {
+    let pagePosition = window.scrollY;
+    document.body.classList.add('disable-scroll');
+    document.body.dataset.position = pagePosition;
+    document.body.style.top = -pagePosition + 'px';
+}
+
+let enableScroll = function() {
+    let pagePosition = parseInt(document.body.dataset.position, 10);
+    document.body.style.top = 'auto';
+    document.body.classList.remove('disable-scroll');
+    window.scroll({ top: pagePosition, left: 0 });
+    document.body.removeAttribute('data-position');
+}

@@ -4,8 +4,14 @@
     box-sizing: border-box;
 }
 
-.body-fixed {
+.disable-scroll {
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
     position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
 }
 
 dialog {
@@ -658,3 +664,12 @@ header {
     padding-left: 1.4vw;
     letter-spacing: 1px;
 }
+
+
+/* Блок шесть */
+
+.block-six {}
+
+.block-six__content {}
+
+.bloxk-six__image {}
