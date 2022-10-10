@@ -8,37 +8,37 @@ $(document).ready(function() {
         $('#link-one').click(function() {
             $('html, body').animate({
                 scrollTop: $('#block-one').offset().top
-            }, 500);
+            }, 1000);
         });
         $('#link-two').click(function() {
             $('html, body').animate({
                 scrollTop: $('#block-two').offset().top
-            }, 500);
+            }, 1000);
         });
         $('#link-three').click(function() {
             $('html, body').animate({
                 scrollTop: $('#block-three').offset().top
-            }, 500);
+            }, 1000);
         });
         $('#link-four').click(function() {
             $('html, body').animate({
                 scrollTop: $('#block-four').offset().top
-            }, 500);
+            }, 1000);
         });
         $('#link-five').click(function() {
             $('html, body').animate({
                 scrollTop: $('#block-five').offset().top
-            }, 500);
+            }, 1000);
         });
         $('#link-six').click(function() {
             $('html, body').animate({
                 scrollTop: $('.block-six').offset().top
-            }, 500);
+            }, 1000);
         });
         $('#link-seven').click(function() {
             $('html, body').animate({
                 scrollTop: $('.block-seven').offset().top
-            }, 500);
+            }, 1000);
         });
     });
     $(function showModalWindow() {

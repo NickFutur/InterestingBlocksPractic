@@ -76,6 +76,14 @@ dialog {
     letter-spacing: 1px;
     width: 70%;
     text-align: center;
+    margin-bottom: 2vw;
+}
+
+.dialog-open__link {
+    color: #fff;
+    font-size: 1vw;
+    letter-spacing: 1px;
+    text-align: center;
 }
 
 .close-button {
@@ -748,10 +756,74 @@ header {
     height: 100vh;
     width: 100%;
     display: grid;
+    position: relative;
 }
 
-.block-seven__image {}
+.block-seven__image {
+    position: relative;
+    background-image: url('../img/fern-g97f1f0ec9_1920.jpg');
+    width: 100%;
+    height: 60vh;
+    margin-top: 5%;
+}
 
-.block-seven__content {}
+.block-seven__icons {
+    position: relative;
+    display: flex;
+    top: -90%;
+    left: 0;
+    width: 100%;
+    justify-content: space-around;
+    align-items: flex-start;
+    z-index: 10;
+}
 
-.block-seven__block {}
+.block-seven__icon {
+    display: flex;
+    width: 100px;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    padding: 20px;
+}
+
+.block-seven__icon-img {
+    width: 50px;
+}
+
+.block-seven__content {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+}
+
+.block-seven__block {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.block-seven__text {
+    width: 15vw;
+}
+
+.block-seven__title {
+    font-family: Arial;
+    font-size: 1.5vw;
+    color: #777;
+    letter-spacing: 3px;
+    text-align: center;
+    margin-bottom: 1vw;
+    text-transform: uppercase;
+}
+
+.block-seven__desc {
+    text-align: center;
+    font-size: 1vw;
+    letter-spacing: 1px;
+    margin-bottom: 50px;
+}
