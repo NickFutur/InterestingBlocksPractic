@@ -35,6 +35,11 @@ $(document).ready(function() {
                 scrollTop: $('.block-six').offset().top
             }, 500);
         });
+        $('#link-seven').click(function() {
+            $('html, body').animate({
+                scrollTop: $('.block-seven').offset().top
+            }, 500);
+        });
     });
     $(function showModalWindow() {
         $('dialog').css({

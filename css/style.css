@@ -683,7 +683,6 @@ header {
 
 .block-six__body {
     position: relative;
-    /* clip-path: polygon(0.00% 0.00%, 30.00% 0.00%, 71.00% 100.00%, 0.00% 100.00%); */
     display: grid;
     align-items: center;
 }
@@ -727,7 +726,7 @@ header {
     letter-spacing: 1px;
 }
 
-.bloxk-six__image {
+.block-six__image {
     clip-path: polygon(0.00% 0.00%, 100.00% 0.00%, 100.00% 100.00%, 45.17% 100%);
     position: absolute;
     background-color: #303030;
@@ -741,3 +740,18 @@ header {
     right: 0;
     height: 100vh;
 }
+
+
+/* Блок семь */
+
+.block-seven {
+    height: 100vh;
+    width: 100%;
+    display: grid;
+}
+
+.block-seven__image {}
+
+.block-seven__content {}
+
+.block-seven__block {}
