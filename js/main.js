@@ -40,6 +40,11 @@ $(document).ready(function() {
                 scrollTop: $('.block-seven').offset().top
             }, 1000);
         });
+        $('#link-eight').click(function() {
+            $('html, body').animate({
+                scrollTop: $('#block-eight').offset().top
+            }, 1000);
+        });
     });
     $(function showModalWindow() {
         $('dialog').css({
