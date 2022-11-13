@@ -45,6 +45,11 @@ $(document).ready(function() {
                 scrollTop: $('#block-eight').offset().top
             }, 1000);
         });
+        $('#link-nine').click(function() {
+            $('html, body').animate({
+                scrollTop: $('#block-nine').offset().top
+            }, 1000);
+        });
     });
     $(function showModalWindow() {
         $('dialog').css({
@@ -121,4 +126,39 @@ let enableScroll = function() {
     document.body.classList.remove('disable-scroll');
     window.scroll({ top: pagePosition, left: 0 });
     document.body.removeAttribute('data-position');
+}
+
+let slider = document.getElementById("myRange");
+let slider1 = document.getElementById("myRange1");
+let slider2 = document.getElementById("myRange2");
+let output = document.getElementById("demo");
+let output1 = document.getElementById("demo1");
+let output2 = document.getElementById("demo2");
+let rangeBlock = document.getElementById("rangeBlock");
+let rangeBlock1 = document.getElementById("rangeBlock1");
+let rangeBlock2 = document.getElementById("rangeBlock2");
+output.innerHTML = slider.value;
+output1.innerHTML = slider1.value;
+output2.innerHTML = slider2.value;
+rangeBlock.style.width = `57%`;
+rangeBlock1.style.width = `23%`;
+rangeBlock2.style.width = `14%`;
+demo.style.left = `57%`;
+demo1.style.left = `22%`;
+demo2.style.left = `13%`;
+// slider.style.width = '100%';
+slider.oninput = function() {
+    output.innerHTML = this.value;
+    demo.style.left = `${slider.value - 2}%`;
+    rangeBlock.style.width = `${slider.value}%`;
+}
+slider1.oninput = function() {
+    output1.innerHTML = this.value;
+    demo1.style.left = `${slider1.value - 1}%`;
+    rangeBlock1.style.width = `${slider1.value}%`;
+}
+slider2.oninput = function() {
+    output2.innerHTML = this.value;
+    demo2.style.left = `${slider2.value - 1}%`;
+    rangeBlock2.style.width = `${slider2.value}%`;
 }

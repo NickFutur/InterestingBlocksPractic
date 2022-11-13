@@ -1,5 +1,119 @@
+@media (max-width:1250px) {
+    .block-two>div:nth-child(1) {
+        width: 0px;
+    }
+    .block-two>div {
+        min-width: 675px;
+    }
+    .block-three__right {
+        padding: 10px 10px;
+    }
+    .block-four__right {
+        padding: 0px;
+        padding-right: 10vw;
+    }
+    .block-four {
+        display: flex;
+        flex-direction: column-reverse;
+        align-content: center;
+        /* align-items: center; */
+        justify-content: space-around;
+    }
+    .block-four__right-desc {
+        margin-top: 20px;
+        max-width: 100%;
+    }
+    .block-four__right-label {
+        margin-top: 20px;
+    }
+    .card__description {
+        width: 80%;
+    }
+    .content {
+        grid-gap: 0px;
+    }
+    .content__item__text,
+    .content__item__txt {
+        font-size: 11px;
+    }
+    .block-six__txt-block {
+        width: 86%;
+    }
+    .block-six__txt,
+    .block-six__txt-block,
+    .block-seven__desc,
+    .block-eight__graphic-desc,
+    .block-eight__text,
+    .block-eight__graphic-title,
+    .nine-block__desc,
+    .circle-item__txt,
+    .nine-block__sliders-text p {
+        font-size: 12px;
+    }
+    .nine-block__circle,
+    .nine-block__leaves {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .nine-block__circle-item,
+    .nine-block__leaves-item {
+        width: 120px;
+        height: 120px;
+    }
+    .leaves-item__desc {
+        font-size: 9px;
+    }
+    .nine-block__graphics {
+        padding: 10px;
+    }
+    .nine-block__sliders {
+        padding-right: 25px;
+    }
+}
+
 @media (max-width:1150px) {
     .block-two>div:nth-child(3) {
-        left: -150%;
+        left: -100%;
+    }
+}
+
+@media (max-width:720px) {
+    .block-three {
+        grid-template-columns: 1fr;
+    }
+    .block-four__left-square {
+        margin-left: 12vw;
+    }
+    .block-four__left-txt {
+        width: 80%;
+    }
+    .list-margin {
+        margin-left: 10vw;
+    }
+    .block-two>div:nth-child(3) {
+        left: -200%;
+    }
+    .block-two>div {
+        min-width: 625px;
+    }
+    .block-six__content {
+        grid-template-rows: 1fr 1fr 1fr 100px;
+    }
+    .block-six__txt,
+    .block-six__txt-block {
+        width: 100%;
+    }
+}
+
+@media (max-width:480px) {
+    .block-six__label {
+        font-size: 4vw;
+    }
+    .block-six__title {
+        font-size: 6vw;
+    }
+    .block-six {
+        grid-template-columns: 1fr;
     }
 }
