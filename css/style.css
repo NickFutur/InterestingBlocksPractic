@@ -6,6 +6,25 @@
 
 body {
     overflow-x: hidden;
+    overflow: overlay;
+}
+
+
+/* Custom Scroll (кастомный скролл)*/
+
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #303030;
 }
 
 .disable-scroll {
